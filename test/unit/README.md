@@ -40,8 +40,8 @@ it('filters todos correctly based on length', async () => {
   const wrapper = mount(Todo)
   await wrapper.setData({
     todos: [
-      { id: 1, text: 'Short' },      // 5 chars (short)
-      { id: 2, text: 'Very long todo item' }  // 17 chars (long)
+      { id: 1, text: 'Short' },     // 5 chars (short)
+      { id: 2, text: 'Very long todo item' } // 17 chars (long)
     ]
   })
 
