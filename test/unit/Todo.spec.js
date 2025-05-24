@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import Todo from '../../src/components/Todo.vue'
 
 describe('Todo.vue', () => {
-  // Test 1: Computed property test for filtered todos
+   // Test 1: Computed property test for filtered todos
   it('filters todos correctly based on length', async () => {
     const wrapper = mount(Todo)
     
