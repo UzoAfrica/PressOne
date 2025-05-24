@@ -61,7 +61,7 @@ describe('Todo.vue', () => {
     expect(wrapper.vm.error).toBe('Todo cannot be empty')
     expect(wrapper.vm.todos).toHaveLength(0)
 
-    // Add valid todo after error
+     // Add valid todo after error
     await wrapper.setData({ newTodo: 'Valid todo' })
     await wrapper.find('input').trigger('keydown.enter')
     
