@@ -26,16 +26,16 @@ describe('Todo.vue', () => {
     expect(wrapper.vm.filteredTodos).toHaveLength(1)
     expect(wrapper.vm.filteredTodos[0].text).toBe('Very long todo item')
 
-    // Test 'all' filter
+     // Test 'all' filter
     await wrapper.setData({ filter: 'all' })
     expect(wrapper.vm.filteredTodos).toHaveLength(3)
   })
 
-  // Test 2: User interaction test for adding and deleting todos
+     // Test 2: User interaction test for adding and deleting todos
   it('adds and deletes todos correctly', async () => {
     const wrapper = mount(Todo)
     
-    // Add a new todo
+    .// Add a new todo
     await wrapper.setData({ newTodo: 'Test todo' })
     await wrapper.find('input').trigger('keydown.enter')
     
@@ -43,14 +43,14 @@ describe('Todo.vue', () => {
     expect(wrapper.vm.todos[0].text).toBe('Test todo')
     expect(wrapper.vm.newTodo).toBe('')
 
-    // Delete the todo
+      // Delete the todo
     const todoId = wrapper.vm.todos[0].id
     await wrapper.find('button').trigger('click')
     
     expect(wrapper.vm.todos).toHaveLength(0)
   })
 
-  // Test 3: Edge case test for empty input validation
+  .  // Test 3: Edge case test for empty input validation
   it('handles empty todo input correctly', async () => {
     const wrapper = mount(Todo)
     
